@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-app {
+  width: 500px;
+  background-color: #fff;
+  margin: 50px auto;  
+  padding: 40px 20px 50px;
+  border-radius: 20px;
+  color: white;
+  background: linear-gradient(45deg, #009d8e, #75aeff);
+}
+
+.todo-app h2 img {
+  width: 30px;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.row {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 20px;
+  border-radius: 44px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px;
+  background: transparent;
+  font-size: 17px;
+  color: #000;
+  font-weight: 400;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 16px 30px;
+  background: #00CD8E;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  font-weight: bold;
+}
+
+ul {
+  margin-top: 30px;
+}
+
+ul li {
+  list-style-type: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  position: relative;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  top: 12px;
+  left: 8px;
+  background-image: url(not_tick.png);
+  background-size: cover;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+ul li.checked::before {
+  background-image: url(tick.png);
+}
+
+ul li.checked {
+  text-decoration: line-through;
+}
+
+/* delete icon style  */
+ul li img {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  line-height: 40px;
+  color: #fff;
+  font-size: 22px;
+}
